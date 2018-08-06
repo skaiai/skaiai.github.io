@@ -1,5 +1,9 @@
-Hello
-======
+Jekyll Xixia
+============
+
+* Get it from [github](https://github.com/zxixia/jekyll-xixia).
+* See the [live demo](http://zxixia.github.io/jekyll-xixia/).
+* See it [in action on my own blog](http://xixia.info/).
 
 A simple and clean Jekyll theme using [bootstrap](http://getbootstrap.com)
 (not to be confused with jekyll-bootstrap) that's easy to modify and very
@@ -32,13 +36,19 @@ In other words: you can do anything you want with this theme on any site, just p
 provide a link to [the original theme on github](https://github.com/zxixia/jekyll-xixia)
 so I get credit for the original design. Beyond that, have at it!
 
-Thanks to 
+Thanks
 ======
-[original theme on github][org-theme-url](org-https://github.com/zxixia/jekyll-xixia)
+
+1，[Jekyll][jekyll-url]
+
+2，[Bootstrap][bootstrap-url]
+
+3，[Github][github-url]
+
+4，[Jekyll Clean Theme][Jekyll-Clean-Theme-url]
 
 [jekyll-url]: http://jekyllrb.com/
 [bootstrap-url]: http://getbootstrap.com/
 [github-url]: https://github.com/
 [Jekyll-Clean-Theme-url]: https://github.com/scotte/jekyll-clean
 [xixia-url]: http://xixia.info/
-[org-theme-url]: https://github.com/zxixia/jekyll-xixia
