@@ -14,7 +14,7 @@ the latest changes. Pull requests are encouraged and accepted!
 
 Preview
 =======
-![Xixia](/assets/images/preview.png)
+![Xiaxia](/assets/images/preview.png)
 
 
 Thanks to 
