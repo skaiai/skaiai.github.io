@@ -1,0 +1,28 @@
+---
+layout: post
+title:  "ReadMe"
+categories: Other
+tags: Other
+author: skaiai
+comments: true
+description: The read me page.
+---
+
+License
+========
+The content of this theme is distributed and licensed under a
+![License Badge]({{ site.baseurl }}/assets/images/cc_by_88x31.png)
+[Creative Commons Attribution 4.0 License](https://creativecommons.org/licenses/by/4.0/legalcode)
+    This license lets others distribute, remix, tweak, and build upon your work,
+    even commercially, as long as they credit you for the original creation. This
+    is the most accommodating of licenses offered. Recommended for maximum
+    dissemination and use of licensed materials.
+
+Thanks
+======
+1. [Bootstrap][bootstrap-url]
+2. [Jekyll Clean Theme][Jekyll-Clean-Theme-url]
+3. [Theme Maker][xixia-url]
+[bootstrap-url]: http://getbootstrap.com/
+[Jekyll-Clean-Theme-url]: https://github.com/scotte/jekyll-clean
+[xixia-url]: http://xixia.info/

@@ -86,12 +86,6 @@
                 
             
                 
-                    <li><a href="/skaiai.github.io/jekyll/2017/09/05/welcome-to-jekyll.html">Welcome to Jekyll!</a></li>
-                
-            
-                
-            
-                
             
         
     </ul>
@@ -102,15 +96,13 @@
     <h1>Recent Posts</h1>
     <ul>
         
-          <li><a href="/skaiai.github.io/nn/2018/08/07/attention_v.0.1.html">Attention</a></li>
+          <li><a href="/skaiai.github.io/speech-recognition/2018/09/20/seq2seq_for_asr.html">Sequence-to-Sequence Models for ASR (1)</a></li>
         
-          <li><a href="/skaiai.github.io/other/2017/09/19/README.html">Read Me</a></li>
+          <li><a href="/skaiai.github.io/speech-recognition/2018/09/20/paper-sota_sr_seq2seq.html">[Paper] State-of-the-art speech recognition with sequence-to-sequence models</a></li>
         
-          <li><a href="/skaiai.github.io/programmer/2017/09/15/ascii-art-and-text.html">How to get beautiful ASCII pics and ASCII text</a></li>
+          <li><a href="/skaiai.github.io/speech-recognition/2018/09/20/paper-LAS.html">[Paper] Listen, Attend and Spell</a></li>
         
-          <li><a href="/skaiai.github.io/jekyll/2017/09/05/welcome-to-jekyll.html">Welcome to Jekyll!</a></li>
-        
-          <li><a href="/skaiai.github.io/jekyll/2017/09/05/reademe-of-jekyll.html">Readme of Jekyll!</a></li>
+          <li><a href="/skaiai.github.io/other/2018/09/02/README.html">ReadMe</a></li>
         
     </ul>
 </div>
@@ -138,28 +130,82 @@
             <div class="col-md-9">
                 
 <div class="well article">
-	<h2><a href="/skaiai.github.io/jekyll/2017/09/05/welcome-to-jekyll.html">Welcome to Jekyll!</a></h2>
+	<h2><a href="/skaiai.github.io/speech-recognition/2018/09/20/seq2seq_for_asr.html">Sequence-to-Sequence Models for ASR (1)</a></h2>
 	<span class="post-date">
 		
-		September-5-2017
+		September-20-2018
 	</span>
 	<hr style="border-top:1px solid #28323C;"/>
 	
 	<div class="post-content">
-		<p>You’ll find this post in your <code class="highlighter-rouge">_posts</code> directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run <code class="highlighter-rouge">jekyll serve</code>, which launches a web server and auto-regenerates your site when a file is updated.</p>
+		<!--last update: 2018-09-20 <br/><br/>-->
 
-<p>To add new posts, simply add a file in the <code class="highlighter-rouge">_posts</code> directory that follows the convention <code class="highlighter-rouge">YYYY-MM-DD-name-of-post.ext</code> and includes the necessary front matter. Take a look at the source for this post to get an idea about how it works.</p>
+<p>last update: 2018-09-20</p>
 
-<p>Jekyll also offers powerful support for code snippets:</p>
+<hr />
+<!-- > End-to-end approach to speech recognition is appealing to us, as it turns separate models such as AM (acoustic), PM (pronunciation), LM (language) of conventional hybrid ASR system into one single neural network model.<br/><br/>Seq-to-seq models have been used for this purpose and I'd like to review them.<br/> -->
 
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">print_hi</span><span class="p">(</span><span class="nb">name</span><span class="p">)</span>
-  <span class="nb">puts</span> <span class="s2">"Hi, </span><span class="si">#{</span><span class="nb">name</span><span class="si">}</span><span class="s2">"</span>
-<span class="k">end</span>
-<span class="n">print_hi</span><span class="p">(</span><span class="s1">'Tom'</span><span class="p">)</span>
-<span class="c1">#=&gt; prints 'Hi, Tom' to STDOUT.</span></code></pre></figure>
+<p>End-to-end approach to speech recognition is appealing to us, as it turns separate models such as AM (acoustic), PM (pronunciation), LM (language) of conventional hybrid ASR system into one single neural network model.<br /></p>
 
-<p>Check out the <a href="https://jekyllrb.com/docs/home">Jekyll docs</a> for more info on how to get the most out of Jekyll. File all bugs/feature requests at <a href="https://github.com/jekyll/jekyll">Jekyll’s GitHub repo</a>. If you have questions, you can ask them on <a href="https://talk.jekyllrb.com/">Jekyll Talk</a>.</p>
+<p>Seq-to-seq models have been used for this purpose and I’d like to review them.<br /></p>
 
+<hr />
+<h2 id="seq2seq-models">Seq2Seq Models</h2>
+<h4 id="1-connectionist-temporal-classification-ctc">1. Connectionist temporal classification (<strong>CTC</strong>)</h4>
+<ul>
+  <li><a href="https://www.cs.toronto.edu/~graves/icml_2006.pdf">Connectionist Temporal Classification: Labelling Unsegmented Sequence Data with Recurrent Neural Networks</a></li>
+  <li>when: 2006 by Alex Graves</li>
+</ul>
+
+<h4 id="2-recurrent-neural-netowrk-transducer-rnn-t">2. Recurrent neural netowrk Transducer (<strong>RNN-T</strong>)</h4>
+<ul>
+  <li><a href="https://arxiv.org/pdf/1211.3711.pdf">Sequence transduction with recurrent neural networks</a></li>
+  <li>when: Nov 2012 by Alex Graves</li>
+  <li>description: extension of CTC (it augments CTC w/ prediction network)</li>
+</ul>
+
+<h4 id="3-attention-based-model">3. Attention-based Model</h4>
+<ul>
+  <li><strong>LAS</strong> model (non-streaming input)
+    <ul>
+      <li><a href="https://arxiv.org/pdf/1508.01211.pdf">Listen, Attend and Spell</a></li>
+      <li>when: Aug 2015 by CMU, Google Brain</li>
+      <li>description: encoder, decoder and attention btw them. non-streaming input</li>
+    </ul>
+  </li>
+  <li><strong>Nueral Transducer</strong> (streaming input)
+    <ul>
+      <li>improved: <a href="https://pdfs.semanticscholar.org/9409/ce44b3c6b1b55479f3ff0f87f4e7c52f227a.pdf">Improving the performance of online neural transducer models</a>
+        <ul>
+          <li>Dec 2017 by Google</li>
+        </ul>
+      </li>
+      <li>org: <a href="http://bengio.abracadoudou.com/cv/publications/pdf/jaitly_2016_nips.pdf">An online sequence-to-sequence model using partial conditioning</a>
+        <ul>
+          <li>when: 2016 by Google Brain / DeepMind, OpenAI</li>
+          <li>description: streaming input</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="4-rnn-t-w-attention">4. <strong>RNN-T w/ Attention</strong></h4>
+<ul>
+  <li><a href="https://pdfs.semanticscholar.org/6cc6/8e8adf34b580f3f37d1bd267ee701974edde.pdf">A comparison of sequence-to-sequence models for speech recognition</a></li>
+  <li>2017 by Google, NVIDIA</li>
+  <li>description: modification to the RNN transducer replacing the prediction network w/ attention-based decoder entwork used in LAS</li>
+</ul>
+
+<h4 id="5-transformer">5. <strong>Transformer</strong></h4>
+<ul>
+  <li><a href="https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf">Attention is all you need</a></li>
+  <li>2017 by Google Brain/Research, University of Toronto</li>
+  <li>description: attention operations are introduced in encoder and decoder nets both instead of rnn or cnn</li>
+</ul>
+
+<hr />
+<p>Next post will be discussing Transformer model and how to apply it to ASR task.</p>
 
 		<hr style="border-top:1px solid #28323C;"/>
 
@@ -171,7 +217,7 @@
 			
 			 
 			<li class="icon-style"><a href="/skaiai.github.io/categories.html">
-					Jekyll <span>(3)</span>
+					speech-recognition <span>(3)</span>
 					
 				</a></li>
 				
@@ -187,7 +233,14 @@
 			 
 			<li class="icon-style">
 				<a href="/skaiai.github.io/tags.html">
-					Jekyll <span>(3)</span>
+					seq2seq <span>(3)</span>
+					,
+				</a>
+			</li>
+			 
+			<li class="icon-style">
+				<a href="/skaiai.github.io/tags.html">
+					speech-recognition <span>(1)</span>
 					
 				</a>
 			</li>
@@ -199,13 +252,39 @@
 
 	</div>
 	
+	<!-- -->
+	<div id="disqus_thread"></div>
+<script>
+	/**
+	*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+	 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+	 */
+var disqus_config = function () {
+	this.page.url = "http://localhost:4000/speech-recognition/2018/09/20/seq2seq_for_asr.html";  // Replace PAGE_URL with your page's canonical URL variable
+	this.page.identifier = "/speech-recognition/2018/09/20/seq2seq_for_asr"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+(function() {  // DON'T EDIT BELOW THIS LINE
+	var d = document, s = d.createElement('script');
+
+	s.src = 'https://skaiai.disqus.com/embed.js';
+
+	s.setAttribute('data-timestamp', +new Date());
+	(d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
+	<!-- <div id="disqus_thread">
+	 <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript> -->
+	 <!-- <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+	  </div> -->
+	  <!--
+	   
 </div>
 <div class="pagination">
 	
-	<a class="btn btn-default" href="/skaiai.github.io/programmer/2017/09/15/ascii-art-and-text.html" class="next">Newer Post</a>
 	
-	
-	<a class="btn btn-default" href="/skaiai.github.io/jekyll/2017/09/05/reademe-of-jekyll.html" class="previous">Older Post</a>
+	<a class="btn btn-default" href="/skaiai.github.io/speech-recognition/2018/09/20/paper-sota_sr_seq2seq.html" class="previous">Older Post</a>
 	
 </div>
 
