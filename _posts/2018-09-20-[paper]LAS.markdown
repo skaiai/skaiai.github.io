@@ -1,0 +1,13 @@
+---
+layout: post
+title: "[Paper] Listen, Attend and Spell"
+tags: paper seq2seq end2end 
+categories: speech-recognition
+comments: true
+---
+last update: 2018-09-20    
+paper: [Listen, Attend and Spell (Aug 2015)](https://arxiv.org/pdf/1508.01211.pdf)
+<img name="header" img src="{{ site.baseurl }}/assets/images/post_180920/header_las.png" width="600">
+
+# Intro
+
