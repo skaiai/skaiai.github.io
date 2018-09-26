@@ -7,7 +7,8 @@ comments: true
 ---
 <!--last update: 2018-09-20 <br/><br/>-->
 
-last update: 2018-09-20
+last update: 2018-09-26<br/>
+Next Post: [Sequcne-to-Sequence models for ASR (2): Transformer for ASR]({{ site.baseurl }}/speech-recognition/2018/09/26/transformer_for_asr.html)
 
 ---
 <!-- > End-to-end approach to speech recognition is appealing to us, as it turns separate models such as AM (acoustic), PM (pronunciation), LM (language) of conventional hybrid ASR system into one single neural network model.<br/><br/>Seq-to-seq models have been used for this purpose and I'd like to review them.<br/> -->
