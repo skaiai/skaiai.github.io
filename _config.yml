@@ -13,6 +13,7 @@ disqus_id: skaiai
 # *** IMPORTANT: If your local "jekyll serve" throws errors change this to '' or
 #     run it like so: jekyll serve --baseurl=''
 baseurl: '/skaiai.github.io'
+gaaccount: 'UA-126477596-1'
 #baseurl: '/'
 ## default date_format
 date_format: 

@@ -15,4 +15,8 @@
 	<script id="dsq-count-scr" src="//{{ site.disqus }}.disqus.com/count.js" async></script>
 
     {% include footer.html %}
+
+	{% if jekyll.environment == 'production' %}
+	{% include analytics.html %}
+	{% endif %}
 </div>
