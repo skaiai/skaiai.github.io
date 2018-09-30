@@ -1,2 +1,5 @@
 *.org*
-_posts/2018-09-20-[paper]*.markdown
+
+_posts/2018-09-20-[paper]sota_sr_seq2seq.markdown
+_posts/2018-09-20-[paper]LAS.markdown
+_posts/2018-09-26-transformer.markdown

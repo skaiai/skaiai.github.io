@@ -100,11 +100,11 @@
     <h1>Recent Posts</h1>
     <ul>
         
-          <li><a href="/skaiai.github.io/speech-recognition/2018/09/26/transformer_for_asr.html">Sequence-to-Sequence Models for ASR (2): Transformer for ASR</a></li>
+          <li><a href="/skaiai.github.io/sequence-to-sequence/2018/09/26/transformer.html">Sequence-to-Sequence Models (2): Attention is all you need</a></li>
         
           <li><a href="/skaiai.github.io/food/2018/09/26/mekong_tai.html">메콩타이 (강남교보타워점)</a></li>
         
-          <li><a href="/skaiai.github.io/speech-recognition/2018/09/20/seq2seq_for_asr.html">Sequence-to-Sequence Models for ASR (1)</a></li>
+          <li><a href="/skaiai.github.io/sequence-to-sequence/2018/09/20/seq2seq.html">Sequence-to-Sequence Models (1)</a></li>
         
           <li><a href="/skaiai.github.io/speech-recognition/2018/09/20/paper-sota_sr_seq2seq.html">[Paper] State-of-the-art speech recognition with sequence-to-sequence models</a></li>
         
@@ -136,28 +136,73 @@
             <div class="col-md-9">
                 
 <div class="well article">
-	<h2><a href="/skaiai.github.io/speech-recognition/2018/09/26/transformer_for_asr.html">Sequence-to-Sequence Models for ASR (2): Transformer for ASR</a></h2>
+	<h2><a href="/skaiai.github.io/sequence-to-sequence/2018/09/20/seq2seq.html">Sequence-to-Sequence Models (1)</a></h2>
 	<span class="post-date">
 		
-		September-26-2018
+		September-20-2018
 	</span>
 	<hr style="border-top:1px solid #28323C;"/>
 	
 	<div class="post-content">
 		<!--last update: 2018-09-20 <br/><br/>-->
 
-<p>last update: 2018-09-26<br />
-Previous Post: <a href="/skaiai.github.io/speech-recognition/2018/09/20/seq2seq_for_asr.html">Sequcne-to-Sequence models for ASR (1)</a></p>
+<p>Last update: 2018-09-26<br />
+Next Post: <a href="/skaiai.github.io/sequence-to-sequence/2018/09/26/transformer.html">Sequence-to-Sequence models (2)</a></p>
 
 <hr />
-
-<p>Next post will be discussing Transformer model and how to apply it to ASR task.</p>
+<!-- > End-to-end approach to speech recognition is appealing to us, as it turns separate models such as AM (acoustic), PM (pronunciation), LM (language) of conventional hybrid ASR system into one single neural network model.<br/><br/>Seq-to-seq models have been used for this purpose and I'd like to review them.<br/> -->
 
 <p>End-to-end approach to speech recognition is appealing to us, as it turns separate models such as AM (acoustic), PM (pronunciation), LM (language) of conventional hybrid ASR system into one single neural network model.<br /></p>
 
 <p>Seq-to-seq models have been used for this purpose and I’d like to review them.<br /></p>
 
 <hr />
+<h2 id="seq2seq-models">Seq2Seq Models</h2>
+<h4 id="1-connectionist-temporal-classification-ctc">1. Connectionist temporal classification (<strong>CTC</strong>)</h4>
+<ul>
+  <li><a href="https://www.cs.toronto.edu/~graves/icml_2006.pdf">Connectionist Temporal Classification: Labelling Unsegmented Sequence Data with Recurrent Neural Networks</a></li>
+  <li>when: 2006 by Alex Graves</li>
+</ul>
+
+<h4 id="2-recurrent-neural-netowrk-transducer-rnn-t">2. Recurrent neural netowrk Transducer (<strong>RNN-T</strong>)</h4>
+<ul>
+  <li><a href="https://arxiv.org/pdf/1211.3711.pdf">Sequence transduction with recurrent neural networks</a></li>
+  <li>when: Nov 2012 by Alex Graves</li>
+  <li>description: extension of CTC (it augments CTC w/ prediction network)</li>
+</ul>
+
+<h4 id="3-attention-based-model">3. Attention-based Model</h4>
+<ul>
+  <li><strong>LAS</strong> model (non-streaming input)
+    <ul>
+      <li><a href="https://arxiv.org/pdf/1508.01211.pdf">Listen, Attend and Spell</a></li>
+      <li>when: Aug 2015 by CMU, Google Brain</li>
+      <li>description: encoder, decoder and attention btw them. non-streaming input</li>
+    </ul>
+  </li>
+  <li><strong>Nueral Transducer</strong> (streaming input)
+    <ul>
+      <li>improved: <a href="https://pdfs.semanticscholar.org/9409/ce44b3c6b1b55479f3ff0f87f4e7c52f227a.pdf">Improving the performance of online neural transducer models</a>
+        <ul>
+          <li>Dec 2017 by Google</li>
+        </ul>
+      </li>
+      <li>org: <a href="http://bengio.abracadoudou.com/cv/publications/pdf/jaitly_2016_nips.pdf">An online sequence-to-sequence model using partial conditioning</a>
+        <ul>
+          <li>when: 2016 by Google Brain / DeepMind, OpenAI</li>
+          <li>description: streaming input</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h4 id="4-rnn-t-w-attention">4. <strong>RNN-T w/ Attention</strong></h4>
+<ul>
+  <li><a href="https://pdfs.semanticscholar.org/6cc6/8e8adf34b580f3f37d1bd267ee701974edde.pdf">A comparison of sequence-to-sequence models for speech recognition</a></li>
+  <li>2017 by Google, NVIDIA</li>
+  <li>description: modification to the RNN transducer replacing the prediction network w/ attention-based decoder entwork used in LAS</li>
+</ul>
 
 <h4 id="5-transformer">5. <strong>Transformer</strong></h4>
 <ul>
@@ -167,6 +212,7 @@ Previous Post: <a href="/skaiai.github.io/speech-recognition/2018/09/20/seq2seq_
 </ul>
 
 <hr />
+<p>Next post will be discussing Transformer model and how to apply it to ASR task.</p>
 
 		<hr style="border-top:1px solid #28323C;"/>
 
@@ -178,7 +224,7 @@ Previous Post: <a href="/skaiai.github.io/speech-recognition/2018/09/20/seq2seq_
 			
 			 
 			<li class="icon-style"><a href="/skaiai.github.io/categories.html">
-					speech-recognition <span>(4)</span>
+					sequence-to-sequence <span>(2)</span>
 					
 				</a></li>
 				
@@ -195,13 +241,6 @@ Previous Post: <a href="/skaiai.github.io/speech-recognition/2018/09/20/seq2seq_
 			<li class="icon-style">
 				<a href="/skaiai.github.io/tags.html">
 					seq2seq <span>(4)</span>
-					,
-				</a>
-			</li>
-			 
-			<li class="icon-style">
-				<a href="/skaiai.github.io/tags.html">
-					speech-recognition <span>(2)</span>
 					
 				</a>
 			</li>
@@ -268,8 +307,8 @@ Previous Post: <a href="/skaiai.github.io/speech-recognition/2018/09/20/seq2seq_
 	 *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
 	 */
 var disqus_config = function () {
-	this.page.url = "http://localhost:4000/speech-recognition/2018/09/26/transformer_for_asr.html";  // Replace PAGE_URL with your page's canonical URL variable
-	this.page.identifier = "/speech-recognition/2018/09/26/transformer_for_asr"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+	this.page.url = "http://localhost:4000/sequence-to-sequence/2018/09/20/seq2seq.html";  // Replace PAGE_URL with your page's canonical URL variable
+	this.page.identifier = "/sequence-to-sequence/2018/09/20/seq2seq"; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 };
 (function() {  // DON'T EDIT BELOW THIS LINE
 	var d = document, s = d.createElement('script');
@@ -291,8 +330,10 @@ var disqus_config = function () {
 </div>
 <div class="pagination">
 	
+	<a class="btn btn-default" href="/skaiai.github.io/food/2018/09/26/mekong_tai.html" class="next">Newer Post</a>
 	
-	<a class="btn btn-default" href="/skaiai.github.io/food/2018/09/26/mekong_tai.html" class="previous">Older Post</a>
+	
+	<a class="btn btn-default" href="/skaiai.github.io/speech-recognition/2018/09/20/paper-sota_sr_seq2seq.html" class="previous">Older Post</a>
 	
 </div>
 

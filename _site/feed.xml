@@ -7,23 +7,14 @@
 		<atom:link href="http://localhost:4000/skaiai.github.io/feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
-				<title>Sequence-to-Sequence Models for ASR (2): Transformer for ASR</title>
+				<title>Sequence-to-Sequence Models (2): Attention is all you need</title>
 				<description>&lt;!--last update: 2018-09-20 &lt;br/&gt;&lt;br/&gt;--&gt;
 
-&lt;p&gt;last update: 2018-09-26&lt;br /&gt;
-Previous Post: &lt;a href=&quot;/skaiai.github.io/speech-recognition/2018/09/20/seq2seq_for_asr.html&quot;&gt;Sequcne-to-Sequence models for ASR (1)&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Last update: 2018-09-26&lt;br /&gt;
+Previous Post: &lt;a href=&quot;/skaiai.github.io/sequence-to-sequence/2018/09/20/seq2seq.html&quot;&gt;Sequence-to-Sequence models (1)&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
-&lt;p&gt;Next post will be discussing Transformer model and how to apply it to ASR task.&lt;/p&gt;
-
-&lt;p&gt;End-to-end approach to speech recognition is appealing to us, as it turns separate models such as AM (acoustic), PM (pronunciation), LM (language) of conventional hybrid ASR system into one single neural network model.&lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;Seq-to-seq models have been used for this purpose and I’d like to review them.&lt;br /&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h4 id=&quot;5-transformer&quot;&gt;5. &lt;strong&gt;Transformer&lt;/strong&gt;&lt;/h4&gt;
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://papers.nips.cc/paper/7181-attention-is-all-you-need.pdf&quot;&gt;Attention is all you need&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;2017 by Google Brain/Research, University of Toronto&lt;/li&gt;
@@ -33,8 +24,8 @@ Previous Post: &lt;a href=&quot;/skaiai.github.io/speech-recognition/2018/09/20/
 &lt;hr /&gt;
 </description>
 				<pubDate>Wed, 26 Sep 2018 00:00:00 +0900</pubDate>
-				<link>http://localhost:4000/skaiai.github.io/speech-recognition/2018/09/26/transformer_for_asr.html</link>
-				<guid isPermaLink="true">http://localhost:4000/skaiai.github.io/speech-recognition/2018/09/26/transformer_for_asr.html</guid>
+				<link>http://localhost:4000/skaiai.github.io/sequence-to-sequence/2018/09/26/transformer.html</link>
+				<guid isPermaLink="true">http://localhost:4000/skaiai.github.io/sequence-to-sequence/2018/09/26/transformer.html</guid>
 			</item>
 		
 			<item>
@@ -78,11 +69,11 @@ Previous Post: &lt;a href=&quot;/skaiai.github.io/speech-recognition/2018/09/20/
 			</item>
 		
 			<item>
-				<title>Sequence-to-Sequence Models for ASR (1)</title>
+				<title>Sequence-to-Sequence Models (1)</title>
 				<description>&lt;!--last update: 2018-09-20 &lt;br/&gt;&lt;br/&gt;--&gt;
 
-&lt;p&gt;last update: 2018-09-26&lt;br /&gt;
-Next Post: &lt;a href=&quot;/skaiai.github.io/speech-recognition/2018/09/26/transformer_for_asr.html&quot;&gt;Sequcne-to-Sequence models for ASR (2): Transformer for ASR&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Last update: 2018-09-26&lt;br /&gt;
+Next Post: &lt;a href=&quot;/skaiai.github.io/sequence-to-sequence/2018/09/26/transformer.html&quot;&gt;Sequence-to-Sequence models (2)&lt;/a&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 &lt;!-- &gt; End-to-end approach to speech recognition is appealing to us, as it turns separate models such as AM (acoustic), PM (pronunciation), LM (language) of conventional hybrid ASR system into one single neural network model.&lt;br/&gt;&lt;br/&gt;Seq-to-seq models have been used for this purpose and I'd like to review them.&lt;br/&gt; --&gt;
@@ -150,8 +141,8 @@ Next Post: &lt;a href=&quot;/skaiai.github.io/speech-recognition/2018/09/26/tran
 &lt;p&gt;Next post will be discussing Transformer model and how to apply it to ASR task.&lt;/p&gt;
 </description>
 				<pubDate>Thu, 20 Sep 2018 00:00:00 +0900</pubDate>
-				<link>http://localhost:4000/skaiai.github.io/speech-recognition/2018/09/20/seq2seq_for_asr.html</link>
-				<guid isPermaLink="true">http://localhost:4000/skaiai.github.io/speech-recognition/2018/09/20/seq2seq_for_asr.html</guid>
+				<link>http://localhost:4000/skaiai.github.io/sequence-to-sequence/2018/09/20/seq2seq.html</link>
+				<guid isPermaLink="true">http://localhost:4000/skaiai.github.io/sequence-to-sequence/2018/09/20/seq2seq.html</guid>
 			</item>
 		
 			<item>
@@ -187,8 +178,8 @@ paper: &lt;a href=&quot;https://static.googleusercontent.com/media/research.goog
 		
 			<item>
 				<title>[Paper] Listen, Attend and Spell</title>
-				<description>&lt;p&gt;last update: 2018-09-20  &lt;br /&gt;
-paper: &lt;a href=&quot;https://arxiv.org/pdf/1508.01211.pdf&quot;&gt;Listen, Attend and Spell (Aug 2015)&lt;/a&gt;
+				<description>&lt;p&gt;Last update: 2018-09-20  &lt;br /&gt;
+Paper: &lt;a href=&quot;https://arxiv.org/pdf/1508.01211.pdf&quot;&gt;Listen, Attend and Spell (Aug 2015)&lt;/a&gt;
 &lt;img name=&quot;header&quot; img=&quot;&quot; src=&quot;/skaiai.github.io/assets/images/post_180920/header_las.png&quot; width=&quot;600&quot; /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;intro&quot;&gt;Intro&lt;/h1&gt;
